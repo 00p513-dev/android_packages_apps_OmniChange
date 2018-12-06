@@ -387,6 +387,17 @@
                 <git name="android_device_xiaomi_msm8956-common" />
             </repos>
         </device>
+        <device>
+            <name>Pocophone F1</name>
+            <code>beryllium</code>
+            <repos>
+                <git name="android_device_xiaomi_beryllium" />
+                <git name="android_kernel_xiaomi_sdm845" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_vendor_qcom_opensource_commonsys" />
+                <git name="android_vendor_qcom_opensource_interfaces" />
+            </repos>
+        </device>
     </oem>
     <oem name="OnePlus">
         <device>
