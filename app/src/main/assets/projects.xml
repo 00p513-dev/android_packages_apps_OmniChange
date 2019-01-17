@@ -398,6 +398,21 @@
                 <git name="android_vendor_qcom_opensource_interfaces" />
             </repos>
         </device>
+        <device>
+            <name>Mi Pad 4 (WiFi)</name>
+            <code>clover</code>
+            <repos>
+                <git name="android_hardware_qcom_display-caf-sdm660" />
+                <git name="android_hardware_qcom_audio-caf-sdm660" />
+                <git name="android_hardware_qcom_media-caf-sdm660" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_vendor_qcom_opensource_interfaces" />
+                <git name="android_vendor_qcom_opensource_commonsys" />
+                <git name="android_kernel_xiaomi_clover" />
+                <git name="android_device_xiaomi_clover" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+            </repos>
+        </device>
     </oem>
     <oem name="OnePlus">
         <device>
