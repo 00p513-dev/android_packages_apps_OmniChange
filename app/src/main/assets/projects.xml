@@ -22,7 +22,6 @@
                 <git name="vendor_qcom_opensource_dataservices" />
                 <git name="android_external_ant-wireless_antradio-library" />
                 <git name="android_external_ant-wireless_ant_native" />
-                <git name="android_vendor_qcom_opensource_interfaces" />
             </repos>
         </device>
     </oem>
@@ -51,7 +50,6 @@
                 <git name="android_hardware_qcom_audio-caf-msm8996" />
                 <git name="android_hardware_qcom_media-caf-msm8996" />
                 <git name="android_device_qcom_caf-sepolicy" />
-                <git name="android_vendor_qcom_opensource_interfaces" />
                 <git name="vendor_qcom_opensource_dataservices" />
                 <git name="android_vendor_qcom_opensource_dpm" />
                 <git name="android_external_ant-wireless_antradio-library" />
@@ -104,7 +102,6 @@
                 <git name="android_hardware_qcom_media-caf-msm8996" />
                 <git name="vendor_qcom_opensource_dataservices" />
                 <git name="android_device_qcom_caf-sepolicy" />
-                <git name="android_vendor_qcom_opensource_interfaces" />
             </repos>
         </device>
         <device>
@@ -118,7 +115,6 @@
                 <git name="android_hardware_qcom_media-caf-msm8996" />
                 <git name="vendor_qcom_opensource_dataservices" />
                 <git name="android_device_qcom_caf-sepolicy" />
-                <git name="android_vendor_qcom_opensource_interfaces" />
                 <git name="android_external_bson" />
             </repos>
         </device>
@@ -259,7 +255,6 @@
                 <git name="android_external_ant-wireless_antradio-library" />
                 <git name="android_external_ant-wireless_ant_service" />
                 <git name="android_external_ant-wireless_ant_native" />
-                <git name="android_vendor_qcom_opensource_interfaces" />
             </repos>
         </device>
     </oem>
@@ -282,7 +277,6 @@
                 <git name="android_hardware_qcom_audio-caf-msm8998" />
                 <git name="android_hardware_qcom_display-caf-msm8998" />
                 <git name="android_hardware_qcom_media-caf-msm8998" />
-                <git name="android_vendor_qcom_opensource_interfaces" />
                 <git name="android_hardware_qcom_fm" />
                 <git name="android_external_json-c" />
             </repos>
@@ -318,7 +312,6 @@
                 <git name="android_hardware_qcom_fm" />
                 <git name="android_packages_apps_SnapdragonCamera2" />
                 <git name="vendor_qcom_opensource_dataservices" />
-                <git name="android_vendor_qcom_opensource_interfaces" />
                 <git name="android_device_qcom_caf-sepolicy" />
                 <git name="android_external_ant-wireless_antradio-library" />
                 <git name="android_external_ant-wireless_ant_service" />
@@ -335,7 +328,6 @@
                 <git name="android_kernel_xiaomi_msm8996" />
                 <git name="android_device_xiaomi_gemini" />
                 <git name="android_device_xiaomi_msm8996-common" />
-                <git name="android_vendor_qcom_opensource_interfaces" />
                 <git name="android_vendor_nxp-nfc_opensource_libnfc-nci" />
                 <git name="android_vendor_nxp-nfc_opensource_Nfc" />
                 <git name="android_vendor_nxp-nfc_opensource_frameworks" />
@@ -359,7 +351,6 @@
                 <git name="android_packages_apps_SnapdragonCamera2" />
                 <git name="vendor_qcom_opensource_dataservices" />
                 <git name="android_device_qcom_caf-sepolicy" />
-                <git name="android_vendor_qcom_opensource_interfaces" />
                 <git name="android_vendor_qcom_opensource_bluetooth" />
                 <git name="android_external_ant-wireless_antradio-library" />
                 <git name="android_external_ant-wireless_ant_service" />
@@ -378,7 +369,6 @@
                 <git name="android_packages_apps_SnapdragonCamera2" />
                 <git name="vendor_qcom_opensource_dataservices" />
                 <git name="android_device_qcom_caf-sepolicy" />
-                <git name="android_vendor_qcom_opensource_interfaces" />
                 <git name="android_vendor_qcom_opensource_bluetooth" />
                 <git name="android_external_ant-wireless_antradio-library" />
                 <git name="android_external_ant-wireless_ant_service" />
@@ -400,7 +390,6 @@
                 <git name="android_external_ant-wireless_ant_native" />
                 <git name="android_packages_apps_FMRadio" />
                 <git name="android_hardware_qcom_fm" />
-                <git name="android_vendor_qcom_opensource_interfaces" />
                 <git name="android_kernel_xiaomi_msm8956" />
                 <git name="android_device_xiaomi_kenzo" />
                 <git name="android_device_xiaomi_msm8956-common" />
@@ -414,7 +403,6 @@
                 <git name="android_kernel_xiaomi_sdm845" />
                 <git name="android_device_qcom_caf-sepolicy" />
                 <git name="android_vendor_qcom_opensource_commonsys" />
-                <git name="android_vendor_qcom_opensource_interfaces" />
             </repos>
         </device>
         <device>
@@ -425,7 +413,6 @@
                 <git name="android_hardware_qcom_audio-caf-sdm660" />
                 <git name="android_hardware_qcom_media-caf-sdm660" />
                 <git name="android_device_qcom_caf-sepolicy" />
-                <git name="android_vendor_qcom_opensource_interfaces" />
                 <git name="android_vendor_qcom_opensource_commonsys" />
                 <git name="android_kernel_xiaomi_clover" />
                 <git name="android_device_xiaomi_clover" />
