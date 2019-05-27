@@ -197,6 +197,24 @@
             </repos>
         </device>
         <device>
+            <name>Xperia XA2 Plus</name>
+            <code>voyager</code>
+            <repos>
+                <git name="android_device_sony_voyager" />
+                <git name="android_device_sony_nile-common" />
+                <git name="android_hardware_sony_macaddrsetup" />
+                <git name="android_kernel_sony_sdm660" />
+                <git name="android_hardware_qcom_media-caf-sdm660" />
+                <git name="android_hardware_qcom_audio-caf-sdm660" />
+                <git name="android_hardware_qcom_display-caf-sdm660" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="vendor_qcom_opensource_dataservices" />
+                <git name="android_vendor_qcom_opensource_commonsys" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+                <git name="android_packages_apps_OmniDisplayManager" />
+            </repos>
+        </device>
+        <device>
             <name>Xperia XZ</name>
             <code>kagura</code>
             <repos>
