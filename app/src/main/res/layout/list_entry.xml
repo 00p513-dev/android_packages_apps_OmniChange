@@ -23,16 +23,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
+            <ImageView
                 android:id="@+id/is_new"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="5dp"
-                android:text="@string/is_new"
-                android:textAlignment="center"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="?android:attr/colorAccent"
-                android:visibility="gone"/>
+                android:src="@drawable/new_item"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical" />
 
             <TextView
                 android:id="@+id/title"
@@ -41,7 +39,8 @@
                 android:singleLine="true"
                 android:text="@string/error"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="?android:attr/textColorPrimary"/>
+                android:textColor="?android:attr/textColorPrimary"
+                android:layout_gravity="center_vertical" />
         </LinearLayout>
 
         <TextView

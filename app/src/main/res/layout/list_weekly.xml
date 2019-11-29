@@ -11,8 +11,8 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="4dp"
-        android:background="@drawable/card_bg_primary_border"
-        android:foreground="?android:selectableItemBackground"
+        android:background="@drawable/card_bg"
+        android:foreground="?android:attr/selectableItemBackground"
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:padding="10dp"
@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/color_primary"/>
+            android:textColor="?android:attr/colorAccent"/>
 
     </LinearLayout>
 </FrameLayout>

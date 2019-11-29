@@ -7,20 +7,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:background="@color/color_primary"
         android:elevation="4dp"
         android:orientation="horizontal"
-        android:paddingEnd="10dp"
-        android:paddingStart="10dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:paddingEnd="5dp"
-            android:text="@string/build_time_label"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@android:color/white"/>
+        android:paddingEnd="14dp"
+        android:paddingStart="10dp"
+        android:background="?android:attr/colorPrimary">
 
         <TextView
             android:id="@+id/build_time"
@@ -29,43 +20,33 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:paddingEnd="10dp"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@android:color/white"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:paddingEnd="5dp"
-            android:text="@string/start_time_label"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@android:color/white"/>
+            android:drawableStart="@drawable/build_time"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
 
         <TextView
             android:id="@+id/start_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@android:color/white"
-            android:paddingEnd="10dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:paddingEnd="5dp"
-            android:text="@string/num_items_label"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@android:color/white"/>
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:textColor="?android:attr/colorAccent"
+            android:drawableStart="@drawable/show_since"
+            android:drawablePadding="5dp"
+            android:paddingEnd="10dp"/>
 
         <TextView
             android:id="@+id/num_items"
-            android:layout_width="wrap_content"
+            android:layout_width="55dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@android:color/white"/>
+            android:gravity="center_vertical|end"
+            android:drawableStart="@drawable/change_list"
+            android:drawablePadding="5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
 
     </LinearLayout>
 
@@ -99,8 +80,7 @@
             android:id="@+id/progress"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_centerInParent="true"
-            android:indeterminateDrawable="@drawable/progress"/>
+            android:layout_centerInParent="true"/>
 
     </RelativeLayout>
 </LinearLayout>
