@@ -3,6 +3,17 @@
 <!-- Alternative: https://github.com/omnirom/android_device_samsung_i9300/blob/android-4.4/omni.dependencies -->
 <devicesList>
     <oem name="Asus">
+        <device>
+            <name>Zenfone 6 2019</name>
+            <code>zenfone6</code>
+            <repos>
+                <git name="android_device_asus_zenfone6" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_vendor_qcom_opensource_commonsys" />
+                <git name="android_vendor_qcom_opensource_fm-commonsys" />
+                <git name="android_kernel_asus_sm8150" />
+            </repos>
+        </device>
     </oem>
     <oem name="Acer">
     </oem>
