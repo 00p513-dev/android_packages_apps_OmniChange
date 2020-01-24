@@ -22,7 +22,7 @@
     <string name="clear_cache_sum">Herhangi bir mesele meydana geldiği takdirde buraya dokunun</string>
     <string name="cleared_cache">Önbellek temizlendi.</string>
     <string name="network_error">Hatâ</string>
-    <string name="using_cache">Şebeke hatâsı. Sadece önbelleğe alınmış değişiklikler gösteriliyor. \n\nLütfen web sitesini tarayıcınızdan bizzat açmaya çalışın.</string>
+    <string name="using_cache">Şebeke hatâsı. Sadece ön belleğe alınmış değişiklikler gösteriliyor. \n\nLütfen web sitesini tarayıcınızdan bizzat açmaya çalışın.</string>
     <string name="change">Değişiklik</string>
     <string name="no_changes">Değişiklik yok.\n\nYa derlemeniz güncel ya da değişiklik filtrelerini güncellemeniz gerekiyor.</string>
     <string name="no_message">(teslim etme mesajı yok)</string>
