@@ -134,6 +134,17 @@
             </repos>
         </device>
         <device>
+            <name>Moto One Hyper</name>
+            <code>def</code>
+            <repos>
+                <git name="android_device_motorola_def" />
+                <git name="android_kernel_motorola_sm6150" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+                <git name="android_vendor_qcom_opensource_commonsys" />
+            </repos>
+        </device>
+        <device>
             <name>Moto Z</name>
             <code>griffin</code>
             <repos>
