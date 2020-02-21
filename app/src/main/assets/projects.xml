@@ -478,6 +478,18 @@
                 <git name="android_packages_apps_SnapdragonCamera2" />
             </repos>
         </device>
+        <device>
+            <name>Mi 9T Pro</name>
+            <code>raphael</code>
+            <repos>
+                <git name="android_device_xiaomi_raphael" />
+                <git name="android_kernel_xiaomi_raphael" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_vendor_qcom_opensource_commonsys" />
+                <git name="android_vendor_qcom_opensource_fm-commonsys" />
+                <git name="android_packages_apps_SnapdragonCamera2" />
+            </repos>
+        </device>
     </oem>
     <oem name="OnePlus">
         <device>
