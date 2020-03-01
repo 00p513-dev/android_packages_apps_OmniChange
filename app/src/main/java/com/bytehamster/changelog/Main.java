@@ -61,7 +61,7 @@ public class Main extends Activity {
     private static final String TAG = "Main";
     public static final String DEFAULT_GERRIT_URL = "https://gerrit.omnirom.org/";
     public static final String DEFAULT_BRANCH = "android-10";
-    public static final String DEFAULT_VERSION = "10.0";
+    public static final String DEFAULT_VERSION = "omni-10";
     public static final int MAX_CHANGES = 200;
     public static final int MAX_CHANGES_FETCH = 800;  // Max changes to be fetched
     public static final int MAX_CHANGES_DB = 1500; // Max changes to be loaded from DB
@@ -594,6 +594,10 @@ public class Main extends Activity {
 
     public static String getDefaultDevice() {
         return SystemProperties.get("ro.omni.device");
+    }
+
+    public static String getDefaultVersion() {
+        return SystemProperties.get("ro.omni.version");
     }
 
     private void setDefaultDeviceFilter() {

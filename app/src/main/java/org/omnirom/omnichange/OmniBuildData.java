@@ -24,7 +24,10 @@ public class OmniBuildData {
     private static final String TAG = "OmniBuildData";
     private static final int HTTP_READ_TIMEOUT = 30000;
     private static final int HTTP_CONNECTION_TIMEOUT = 30000;
-	private static final String URL_BAS_JSON = "https://dl.omnirom.org/json.php";
+    private static final String URL_BASE_JSON = "https://dl.omnirom.org/json.php";
+    private static final String URL_BASE_GAPPS_JSON = "https://dl.omnirom.org/tmp/json.php";
+    private static final String GAPPS_VERSION_TAG = "GAPPS";
+    private static final String WEEKLY_VERSION_TAG = "WEEKLY";
 
     private static HttpsURLConnection setupHttpsRequest(String urlStr){
         URL url;
@@ -86,8 +89,9 @@ public class OmniBuildData {
 
     private static boolean isMatchingImage(String fileName) {
         try {
-            if(fileName.endsWith(".zip") && fileName.indexOf(Main.getDefaultDevice()) != -1) {
-                if(fileName.contains(Main.DEFAULT_VERSION)) {
+            if(fileName.endsWith(".zip") && fileName.contains(Main.getDefaultDevice())) {
+                if(fileName.contains(Main.DEFAULT_VERSION) &&
+                        (fileName.contains(WEEKLY_VERSION_TAG) || fileName.contains(GAPPS_VERSION_TAG))) {
                     return true;
                 }
             }
@@ -107,7 +111,7 @@ public class OmniBuildData {
     }
 
     public static List<Long> getWeeklyBuildTimes() {
-        String url = URL_BAS_JSON;
+        String url = isGappsDevice() ? URL_BASE_GAPPS_JSON : URL_BASE_JSON;
         List<Long> weeklyBuildTimes = new ArrayList<>();
         String buildData = downloadUrlMemoryAsString(url);
         if (buildData == null || buildData.length() == 0) {
@@ -136,5 +140,9 @@ public class OmniBuildData {
             Log.e(TAG, "getWeeklyBuildTimes", e);
         }
         return weeklyBuildTimes;
+    }
+
+    private static boolean isGappsDevice() {
+        return Main.getDefaultVersion().contains(GAPPS_VERSION_TAG);
     }
 }
