@@ -6,6 +6,8 @@
     <string name="refresh">Atualizar</string>
     <string name="ok">OK</string>
     <string name="settings">Configurações</string>
+    <string name="list_action">Ação da lista</string>
+    <string name="list_action_sum">Ação ao selecionar uma entrada da lista</string>
     <string name="cancel">Cancelar</string>
     <string name="filter">Filtro</string>
     <string name="filter_all">Mostrar todos os dispositivos</string>
@@ -13,15 +15,24 @@
     <string name="device_list">Dispositivos</string>
     <string name="this_device">Este dispositivo</string>
     <string name="animate_new">Destacar novos itens</string>
+    <string name="animate_new_sum">Destacar itens que são mostrados pela primeira vez</string>
     <string name="translations">Mostrar alterações de traduções</string>
     <string name="clear_cache">Limpar cache</string>
+    <string name="clear_cache_sum">Em caso de problemas, toque aqui</string>
+    <string name="cleared_cache">Cache limpo.</string>
     <string name="network_error">Erro</string>
+    <string name="using_cache">Erro de rede. Exibir apenas alterações em cache. \n\nPor favor tente abrir o site manualmente no seu navegador.</string>
+    <string name="change">Alterar</string>
+    <string name="no_changes">Sem alterações.\n\nA sua compilação está atualizada ou precisa de atualizar os filtros de alterações.</string>
+    <string name="no_message">(nenhuma mensagem de confirmação)</string>
     <string name="close">Sair</string>
     <string name="open">Abrir</string>
     <string name="is_new">NOVO:</string>
     <string name="error">Erro.</string>
     <string name="open_gerrit">Ver no Gerrit</string>
     <string name="open_website">Website</string>
+    <string name="branches">Repositórios: </string>
+    <string name="show_twrp">Mostrar alterações ao modo de recuperação</string>
     <string name="about">Sobre</string>
     <string name="retry">Tentar novamente</string>
     <string name="gerrit">Gerrit</string>
@@ -31,4 +42,5 @@
     <string name="num_items_label">Alterações:</string>
     <string name="build_time_label">Compilação:</string>
     <string name="menu_date_label">Desde</string>
+    <string name="build_time">Mostrar antes da compilação</string>
 </resources>
