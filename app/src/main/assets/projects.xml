@@ -4,6 +4,16 @@
 <devicesList>
     <oem name="Asus">
         <device>
+            <name>ROG Phone 2</name>
+            <code>rog2</code>
+            <repos>
+                <git name="android_device_asus_rog2" />
+                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_vendor_qcom_opensource_commonsys" />
+                <git name="android_kernel_asus_rog2" />
+            </repos>
+        </device>
+        <device>
             <name>Zenfone 6 2019</name>
             <code>zenfone6</code>
             <repos>
