@@ -628,7 +628,7 @@
     </oem>
     <oem name="Nokia">
         <device>
-            <name>6.1</name>
+            <name>Nokia 6.1</name>
             <code>PL2</code>
             <repos>
                 <git name="android_device_nokia_PL2" />
