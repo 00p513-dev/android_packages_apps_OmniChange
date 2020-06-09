@@ -107,7 +107,7 @@ public class Main extends Activity {
 
         mListView.setAdapter(mChangeAdapter);
         mListView.setOnItemClickListener(MainListClickListener);
-        mListView.setOnItemLongClickListener(MainListLongClickListener);
+        //mListView.setOnItemLongClickListener(MainListLongClickListener);
         mListView.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
@@ -249,7 +249,7 @@ public class Main extends Activity {
                         for (Long weekly : weeklyBuilds) {
                             if (prevChange != null && currentChange.date <= weekly && prevChange.date > weekly) {
                                 Map<String, Object> new_item = new HashMap<String, Object>();
-                                new_item.put("title", getResources().getString(R.string.build_time_label) +
+                                new_item.put("title", getResources().getString(R.string.weekly_time_label) +
                                         " " + Main.mDateDayFormat.format(weekly));
                                 new_item.put("type", Change.TYPE_WEEKLY);
                                 new_item.put("date", weekly);

@@ -156,9 +156,16 @@ class ChangeLoader {
             JSONObject mJSONTemp = (JSONObject) mCurrentObject.get("revisions");   // Revisions
             mJSONTemp = (JSONObject) mJSONTemp.get(mCurrentObject.getString("current_revision")); // Current revision
             mJSONTemp = (JSONObject) mJSONTemp.get("commit");           // Current commit
-            newChange.message = mJSONTemp.getString("message");// Commit message
-
-
+            String message = mJSONTemp.getString("message");
+            String[] lines = message.split("\n");
+            StringBuffer sb = new StringBuffer();
+            for (String l : lines) {
+                if (!l.trim().startsWith("Change-Id")) {
+                    sb.append(l.trim());
+                    sb.append("\n");
+                }
+            }
+            newChange.message = sb.substring(0, sb.length() -1);
             newChange.title = mCurrentObject.getString("subject");
             newChange.owner = ((JSONObject) mCurrentObject.get("owner")).getString("name");
             newChange.lastModified = mDate.getTime();

@@ -6,7 +6,7 @@
 
 			<corners android:radius="4dp"/>
 
-			<solid android:color="?android:attr/colorBackgroundFloating" />
+			<solid android:color="?android:attr/colorAccent" />
 
 		</shape>
 	</item>
