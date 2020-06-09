@@ -1,52 +1,30 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.github.triplet.play'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion '25.0.3'
-
-    playAccountConfigs {
-        defaultAccountConfig {
-            if (project.hasProperty("TRIPLET_API_KEY")) {
-                jsonFile = file(TRIPLET_API_KEY)
-            }
-        }
-    }
-
-    play {
-        track = 'alpha'
-        uploadImages = true
-    }
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.bytehamster.changelog"
-        minSdkVersion 25
-        targetSdkVersion 25
-
-        playAccountConfig = playAccountConfigs.defaultAccountConfig
-    }
-
-    signingConfigs {
-        release {
-            if (project.hasProperty("SIGNING1")) {
-                storeFile file(SIGNING1_STORE_FILE)
-                storePassword SIGNING1_STORE_PASSWORD
-                keyAlias SIGNING1_KEY_ALIAS
-                keyPassword SIGNING1_KEY_PASSWORD
-            }
-        }
+        applicationId "org.omnirom.omnichange"
+        minSdkVersion 28
+        targetSdkVersion 29
+        versionCode 36
+        versionName "3.15"
     }
 
     buildTypes {
         release {
-            signingConfig signingConfigs.release
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            applicationIdSuffix '.debug'
+            versionNameSuffix '-DEBUG'
         }
     }
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.android.support:preference-v14:26.1.0'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.preference:preference:1.1.0'
 }
