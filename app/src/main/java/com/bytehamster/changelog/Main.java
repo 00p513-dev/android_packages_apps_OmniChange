@@ -127,17 +127,6 @@ public class Main extends Activity {
         final long startTime = mSharedPreferences.getLong("start_time", getUnifiedBuildTime());
         mStartDate = findViewById(R.id.start_time);
         mStartDate.setText(mDateDayFormat.format(startTime));
-        mStartDate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                doSelectStartTime(new Runnable() {
-                    @Override
-                    public void run() {
-                        load();
-                    }
-                });
-            }
-        });
 
         TextView buildDate = findViewById(R.id.build_time);
         buildDate.setText(mDateFormat.format(Build.TIME));
@@ -356,6 +345,14 @@ public class Main extends Activity {
             case R.id.action_settings:
                 Intent i = new Intent(this, Preferences.class);
                 startActivity(i);
+                return true;
+            case R.id.action_since:
+                doSelectStartTime(new Runnable() {
+                    @Override
+                    public void run() {
+                        load();
+                    }
+                });
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
