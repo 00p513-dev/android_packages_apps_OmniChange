@@ -19,7 +19,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AlphaAnimation;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
@@ -91,6 +90,7 @@ public class Main extends Activity {
     private TextView mNumItems;
     private TextView mStartDate;
     private List<Long> mWeeklyBuilds;
+    private Handler mHandler = new Handler();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -108,7 +108,7 @@ public class Main extends Activity {
         mListView.setAdapter(mChangeAdapter);
         mListView.setOnItemClickListener(MainListClickListener);
         //mListView.setOnItemLongClickListener(MainListLongClickListener);
-        mListView.setOnScrollListener(new AbsListView.OnScrollListener() {
+        /*mListView.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
             }
@@ -119,7 +119,7 @@ public class Main extends Activity {
                         (mListView == null || mListView.getChildCount() == 0) ?
                                 0 : mListView.getChildAt(0).getTop();
             }
-        });
+        });*/
 
         if (mSharedPreferences.getString("branch", DEFAULT_BRANCH).equals("All")) {
             mSharedPreferences.edit().putString("branch", "").commit();
@@ -172,7 +172,6 @@ public class Main extends Activity {
                     public void run() {
                         mChangeAdapter.clear();
                         findViewById(R.id.progress).setVisibility(View.VISIBLE);
-                        ((TextView) findViewById(android.R.id.empty)).setText("");
                     }
                 });
 
@@ -286,7 +285,6 @@ public class Main extends Activity {
                     @Override
                     public void run() {
                         hideProgress();
-                        ((TextView) findViewById(android.R.id.empty)).setText(R.string.no_changes);
                         mChangeAdapter.update(mChangesList);
                         mNumItems.setText(String.valueOf(mChangesCount));
                         mIsLoading = false;
@@ -297,31 +295,13 @@ public class Main extends Activity {
     }
 
     void hideProgress() {
-        AlphaAnimation alphaAnimation = new AlphaAnimation(1, 0);
-        alphaAnimation.setDuration(300);
-        findViewById(R.id.progress).startAnimation(alphaAnimation);
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                findViewById(R.id.progress).setVisibility(View.GONE);
-            }
-        }, 280);
-
-        final AlphaAnimation alphaAnimation2 = new AlphaAnimation(0, 1);
-        alphaAnimation2.setDuration(300);
-        mListView.startAnimation(alphaAnimation2);
-
-        findViewById(android.R.id.empty).setVisibility(View.GONE);
+        findViewById(R.id.progress).setVisibility(View.GONE);
         if (mChangesList.isEmpty()) {
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    final AlphaAnimation alphaAnimation = new AlphaAnimation(0, 1);
-                    alphaAnimation.setDuration(500);
-                    findViewById(android.R.id.empty).setVisibility(View.VISIBLE);
-                    findViewById(android.R.id.empty).startAnimation(alphaAnimation);
-                }
-            }, 280);
+            findViewById(android.R.id.list).setVisibility(View.GONE);
+            findViewById(android.R.id.empty).setVisibility(View.VISIBLE);
+        } else {
+            findViewById(android.R.id.empty).setVisibility(View.GONE);
+            findViewById(android.R.id.list).setVisibility(View.VISIBLE);
         }
     }
 
@@ -544,40 +524,18 @@ public class Main extends Activity {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
             if ((Integer) mChangesList.get(position).get("type") == Change.TYPE_ITEM) {
+                final TextView info = (TextView) view.findViewById(R.id.info);
+                final View buttons = view.findViewById(R.id.buttons);
 
-
-                /*if (mSharedPreferences.getString("list_action", "expand").equals("popup")) {
-                    Dialogs.changeDetails(mActivity, mChangesList.get(position), GERRIT_URL);
-                } else {*/
-                    final TextView info = (TextView) view.findViewById(R.id.info);
-                    final View buttons = view.findViewById(R.id.buttons);
-
-                    if (info.getVisibility() == View.GONE) {
-                        info.setVisibility(View.VISIBLE);
-                        buttons.setVisibility(View.VISIBLE);
-                        mChangesList.get(position).put("visibility", View.VISIBLE);
-
-                        AlphaAnimation alphaAnimation = new AlphaAnimation(0, 1);
-                        alphaAnimation.setDuration(500);
-                        info.startAnimation(alphaAnimation);
-                        buttons.startAnimation(alphaAnimation);
-                    } else {
-                        AlphaAnimation alphaAnimation = new AlphaAnimation(1, 0);
-                        alphaAnimation.setDuration(300);
-                        info.startAnimation(alphaAnimation);
-                        buttons.startAnimation(alphaAnimation);
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                info.setVisibility(View.GONE);
-                                buttons.setVisibility(View.GONE);
-                                mChangesList.get(position).put("visibility", View.GONE);
-                            }
-                        }, 300);
-
-                    }
-                //}
+                if (info.getVisibility() == View.GONE) {
+                    info.setVisibility(View.VISIBLE);
+                    buttons.setVisibility(View.VISIBLE);
+                    mChangesList.get(position).put("visibility", View.VISIBLE);
+                } else {
+                    info.setVisibility(View.GONE);
+                    buttons.setVisibility(View.GONE);
+                    mChangesList.get(position).put("visibility", View.GONE);
+                }
             }
         }
     };
