@@ -29,7 +29,7 @@
     <string name="open">Otevřít</string>
     <string name="is_new">NOVÉ:</string>
     <string name="error">Chyba.</string>
-    <string name="open_gerrit">Zobrazit na Gerritu</string>
+    <string name="open_gerrit">Zobrazit</string>
     <string name="open_website">Webová stránka</string>
     <string name="branches">Pobočky: </string>
     <string name="show_twrp">Zobrazit změny recovery</string>
@@ -41,6 +41,7 @@
     <string name="start_time_label">Od:</string>
     <string name="num_items_label">Změny:</string>
     <string name="build_time_label">Sestavení:</string>
+    <string name="weekly_time_label">Týdně:</string>
     <string name="menu_date_label">Od</string>
     <string name="build_time">Zobrazit před časem sestavením</string>
 </resources>

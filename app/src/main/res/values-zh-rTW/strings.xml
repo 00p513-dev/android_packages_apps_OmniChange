@@ -29,7 +29,6 @@
     <string name="open">開啟</string>
     <string name="is_new">全新:</string>
     <string name="error">錯誤</string>
-    <string name="open_gerrit">在 Gerrit 上查看</string>
     <string name="open_website">網站</string>
     <string name="branches">分支: </string>
     <string name="show_twrp">顯示 Recovery 的變更</string>

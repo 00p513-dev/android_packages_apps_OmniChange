@@ -29,7 +29,6 @@
     <string name="open">開く</string>
     <string name="is_new">新規：</string>
     <string name="error">エラー</string>
-    <string name="open_gerrit">Gerritで参照する</string>
     <string name="open_website">ウェブサイト</string>
     <string name="branches">ブランチ：</string>
     <string name="show_twrp">リカバリーの変更箇所を表示する</string>

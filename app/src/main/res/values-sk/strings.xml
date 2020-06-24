@@ -29,7 +29,6 @@
     <string name="open">Otvoriť</string>
     <string name="is_new">NOVÉ:</string>
     <string name="error">Chyba.</string>
-    <string name="open_gerrit">Pozrieť na Gerrit</string>
     <string name="open_website">Webová stránka</string>
     <string name="branches">Pobočky: </string>
     <string name="show_twrp">Zobraziť zmeny Recovery</string>

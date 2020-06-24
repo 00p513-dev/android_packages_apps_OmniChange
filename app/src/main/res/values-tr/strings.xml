@@ -29,7 +29,6 @@
     <string name="open">Aç</string>
     <string name="is_new">YENİ:</string>
     <string name="error">Hatâ.</string>
-    <string name="open_gerrit">Gerrit\'de göster</string>
     <string name="open_website">Web sitesi</string>
     <string name="branches">Dallar: </string>
     <string name="show_twrp">Recovery değişikliklerini göster</string>

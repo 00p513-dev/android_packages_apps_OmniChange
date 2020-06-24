@@ -29,7 +29,6 @@
     <string name="open">Nyitott</string>
     <string name="is_new">ÚJ:</string>
     <string name="error">Hiba.</string>
-    <string name="open_gerrit">Megtekintés Gerriten</string>
     <string name="open_website">Honlap</string>
     <string name="branches">Ágak: </string>
     <string name="show_twrp">Recovery módosítások megjelenítése</string>

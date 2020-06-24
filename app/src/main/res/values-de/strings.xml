@@ -29,7 +29,7 @@
     <string name="open">Öffnen</string>
     <string name="is_new">NEU:</string>
     <string name="error">Fehler.</string>
-    <string name="open_gerrit">Auf Gerrit ansehen</string>
+    <string name="open_gerrit">Anzeigen</string>
     <string name="open_website">Website</string>
     <string name="branches">Branches: </string>
     <string name="show_twrp">Recovery-Änderungen anzeigen</string>
@@ -41,6 +41,7 @@
     <string name="start_time_label">Seit:</string>
     <string name="num_items_label">Änderungen:</string>
     <string name="build_time_label">Version:</string>
+    <string name="weekly_time_label">Weekly:</string>
     <string name="menu_date_label">Seit</string>
     <string name="build_time">Vor Buildzeitpunkt anzeigen</string>
 </resources>

@@ -29,7 +29,6 @@
     <string name="open">Abrir</string>
     <string name="is_new">NOVO:</string>
     <string name="error">Erro.</string>
-    <string name="open_gerrit">Ver no Gerrit</string>
     <string name="open_website">Website</string>
     <string name="branches">Repositórios: </string>
     <string name="show_twrp">Mostrar alterações ao modo de recuperação</string>

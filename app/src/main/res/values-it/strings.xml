@@ -29,7 +29,6 @@
     <string name="open">Apri</string>
     <string name="is_new">NUOVO:</string>
     <string name="error">Errore.</string>
-    <string name="open_gerrit">Visualizza su Gerrit</string>
     <string name="open_website">Sito web</string>
     <string name="branches">Rami: </string>
     <string name="show_twrp">Mostra modifiche recovery</string>

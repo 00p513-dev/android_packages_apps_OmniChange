@@ -29,7 +29,6 @@
     <string name="open">打开</string>
     <string name="is_new">新</string>
     <string name="error">错误。</string>
-    <string name="open_gerrit">查看 Gerrit</string>
     <string name="open_website">网站</string>
     <string name="branches">分支: </string>
     <string name="show_twrp">显示恢复更改</string>

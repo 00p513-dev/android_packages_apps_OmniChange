@@ -29,7 +29,6 @@
     <string name="open">Открыть</string>
     <string name="is_new">НОВОЕ:</string>
     <string name="error">Ошибка.</string>
-    <string name="open_gerrit">Посмотреть на Gerrit</string>
     <string name="open_website">Веб-сайт</string>
     <string name="branches">Ветки: </string>
     <string name="show_twrp">Показать изменения Recovery</string>
