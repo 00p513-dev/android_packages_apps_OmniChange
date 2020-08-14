@@ -648,4 +648,17 @@
             </repos>
         </device>
     </oem>
+    <oem name="Raspberry">
+        <device>
+            <name>Raspberry Pi 4</name>
+            <code>rpi4</code>
+            <repos>
+                <git name="android_device_brcm_rpi4" />
+                <git name="android_kernel_brcm_arpi" />
+                <git name="android_hardware_arpi" />
+                <git name="android_external_gbm_gralloc" />
+                <git name="proprietary_vendor_brcm" />
+            </repos>
+        </device>
+    </oem>
 </devicesList>
