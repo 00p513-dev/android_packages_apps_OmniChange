@@ -21,7 +21,7 @@
     <string name="clear_cache_sum">Herhangi bir mesele meydana geldiği takdirde buraya dokunun</string>
     <string name="cleared_cache">Önbellek temizlendi.</string>
     <string name="network_error">Hatâ</string>
-    <string name="using_cache">Şebeke hatâsı. Sadece ön belleğe alınmış değişiklikler gösteriliyor. \n\nLütfen web sitesini tarayıcınızdan bizzat açmaya çalışın.</string>
+    <string name="using_cache">Ağ hatâsı. Sadece ön belleğe alınmış değişiklikler gösteriliyor. \n\nLütfen web sitesini tarayıcınızdan bizzat açmaya çalışın.</string>
     <string name="change">Değişiklik</string>
     <string name="no_changes">Değişiklik yok.\n\nYa derlemeniz güncel ya da değişiklik filtrelerini güncellemeniz gerekiyor.</string>
     <string name="no_message">(teslim etme mesajı yok)</string>
@@ -29,6 +29,7 @@
     <string name="open">Aç</string>
     <string name="is_new">YENİ:</string>
     <string name="error">Hatâ.</string>
+    <string name="open_gerrit">Göster</string>
     <string name="open_website">Web sitesi</string>
     <string name="branches">Dallar: </string>
     <string name="show_twrp">Recovery değişikliklerini göster</string>
@@ -40,6 +41,7 @@
     <string name="start_time_label">Başlangıç târihi:</string>
     <string name="num_items_label">Değişiklik adedi:</string>
     <string name="build_time_label">Derleme:</string>
+    <string name="weekly_time_label">Haftalık:</string>
     <string name="menu_date_label">İtibaren</string>
     <string name="build_time">Derleme târihinden evvelkileri göster</string>
 </resources>

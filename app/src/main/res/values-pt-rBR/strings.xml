@@ -29,6 +29,7 @@
     <string name="open">Abrir</string>
     <string name="is_new">NOVO:</string>
     <string name="error">Erro.</string>
+    <string name="open_gerrit">Visualizar</string>
     <string name="open_website">Website</string>
     <string name="branches">Repositórios: </string>
     <string name="show_twrp">Mostrar alterações ao modo de recuperação</string>
@@ -40,6 +41,7 @@
     <string name="start_time_label">Desde:</string>
     <string name="num_items_label">Alterações:</string>
     <string name="build_time_label">Compilação:</string>
+    <string name="weekly_time_label">Semanal:</string>
     <string name="menu_date_label">Desde</string>
     <string name="build_time">Mostrar antes da compilação</string>
 </resources>
