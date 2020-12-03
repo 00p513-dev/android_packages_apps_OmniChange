@@ -29,6 +29,7 @@
     <string name="open">開く</string>
     <string name="is_new">新規：</string>
     <string name="error">エラー</string>
+    <string name="open_gerrit">表示</string>
     <string name="open_website">ウェブサイト</string>
     <string name="branches">ブランチ：</string>
     <string name="show_twrp">リカバリーの変更箇所を表示する</string>
@@ -40,6 +41,7 @@
     <string name="start_time_label">元：</string>
     <string name="num_items_label">変更：</string>
     <string name="build_time_label">ビルド：</string>
+    <string name="weekly_time_label">毎週:</string>
     <string name="menu_date_label">元：</string>
     <string name="build_time">前回のビルド日時を表示</string>
 </resources>

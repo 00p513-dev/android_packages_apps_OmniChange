@@ -29,6 +29,7 @@
     <string name="open">Ava</string>
     <string name="is_new">UUS:</string>
     <string name="error">Viga.</string>
+    <string name="open_gerrit">Kuva</string>
     <string name="open_website">Veebisait</string>
     <string name="branches">Harud: </string>
     <string name="show_twrp">Kuva taastuse muutusi</string>
@@ -40,6 +41,7 @@
     <string name="start_time_label">Alates:</string>
     <string name="num_items_label">Muudatusi:</string>
     <string name="build_time_label">Järk:</string>
+    <string name="weekly_time_label">Iganädalane:</string>
     <string name="menu_date_label">Alates</string>
     <string name="build_time">Kuva enne valmistusaega</string>
 </resources>
