@@ -65,6 +65,7 @@ public class Main extends Activity {
     public static final int MAX_CHANGES_FETCH = 800;  // Max changes to be fetched
     public static final int MAX_CHANGES_DB = 1500; // Max changes to be loaded from DB
     public static final String EMPTY_DEVICE_LIST = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><devicesList></devicesList>";
+    private static final String EXTRA_SINCE_CURRENT = "since_current";
 
     public static final SimpleDateFormat mDateFormatFilter = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.US);
     public static final DateFormat mDateFormat = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);
@@ -124,20 +125,31 @@ public class Main extends Activity {
         if (mSharedPreferences.getString("branch", DEFAULT_BRANCH).equals("All")) {
             mSharedPreferences.edit().putString("branch", "").commit();
         }
-        final long startTime = mSharedPreferences.getLong("start_time", getUnifiedBuildTime());
+        Intent i = getIntent();
+        if (i != null && i.hasExtra(EXTRA_SINCE_CURRENT)) {
+            mSharedPreferences.edit().putLong("start_time", getUnifiedBuildTime()).commit();
+        }
         mStartDate = findViewById(R.id.start_time);
-        mStartDate.setText(mDateDayFormat.format(startTime));
+        mNumItems = findViewById(R.id.num_items);
 
         TextView buildDate = findViewById(R.id.build_time);
         buildDate.setText(mDateFormat.format(Build.TIME));
 
-        mNumItems = findViewById(R.id.num_items);
         loadDeviceMap();
         if (mSharedPreferences.getString("watched_devices", null) == null) {
             setDefaultDeviceFilter();
         }
+
         load();
         checkAlerts();
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        if (intent.hasExtra(EXTRA_SINCE_CURRENT)) {
+            mSharedPreferences.edit().putLong("start_time", getUnifiedBuildTime()).commit();
+        }
     }
 
     @Override
