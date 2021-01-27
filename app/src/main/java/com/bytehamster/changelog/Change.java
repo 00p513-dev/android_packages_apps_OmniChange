@@ -48,6 +48,7 @@ class Change {
                 .replace("%message", message)
                 .replace("%branch", branch ));
         new_item.put("visibility", View.GONE);
+        new_item.put("time", date);
         return new_item;
     }
 

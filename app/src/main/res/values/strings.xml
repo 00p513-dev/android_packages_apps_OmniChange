@@ -61,5 +61,5 @@
     <string name="build_time_label">Build:</string>
     <string name="weekly_time_label">Weekly:</string>
     <string name="menu_date_label">Since</string>
-    <string name="build_time">Show before build time</string>
+    <string name="build_time">Show only before build time</string>
 </resources>

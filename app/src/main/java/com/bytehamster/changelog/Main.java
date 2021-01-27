@@ -57,11 +57,10 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 public class Main extends Activity {
-    private static final String TAG = "Main";
+    private static final String TAG = "OmniChange:Main";
     public static final String DEFAULT_GERRIT_URL = "https://gerrit.omnirom.org/";
     public static final String DEFAULT_BRANCH = "android-11";
     public static final String DEFAULT_VERSION = "omni-11";
-    public static final int MAX_CHANGES = 200;
     public static final int MAX_CHANGES_FETCH = 800;  // Max changes to be fetched
     public static final int MAX_CHANGES_DB = 1500; // Max changes to be loaded from DB
     public static final String EMPTY_DEVICE_LIST = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><devicesList></devicesList>";
@@ -76,12 +75,12 @@ public class Main extends Activity {
     private final ArrayList<Map<String, Object>> mDevicesList = new ArrayList<Map<String, Object>>();
     private final Map<String, Map<String, Object>> mDevicesMap = new HashMap<String, Map<String, Object>>();
     private final Map<String, Map<String, Object>> mWatchedMap = new HashMap<String, Map<String, Object>>();
+    private final HashMap<Long, Map<String, Object>> mChangesDict = new HashMap<>();
 
     private ListView mListView = null;
     private Activity mActivity = null;
     private SharedPreferences mSharedPreferences = null;
     private String mDeviceFilterKeyword;
-    private String mLastDate = "";
     private boolean mIsLoading = false;
     private boolean mJustStarted = true;
     private Document mWatchedDoc = null;
@@ -91,7 +90,6 @@ public class Main extends Activity {
     private TextView mNumItems;
     private TextView mStartDate;
     private List<Long> mWeeklyBuilds;
-    private Handler mHandler = new Handler();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -189,6 +187,7 @@ public class Main extends Activity {
 
                 if (mWeeklyBuilds == null) {
                     mWeeklyBuilds = OmniBuildData.getWeeklyBuildTimes();
+                    Log.d(TAG, "getWeeklyBuildTimes " + mWeeklyBuilds);
                 }
 
                 ChangeLoader loader = new ChangeLoader(mActivity, mSharedPreferences, GERRIT_URL);
@@ -208,12 +207,9 @@ public class Main extends Activity {
                 }
 
                 mChangesCount = 0;
-                mLastDate = "-";
                 long buildTime = Build.TIME;
+
                 String buildTimeString = getResources().getString(R.string.build_time_label) + " " + Main.mDateFormat.format(buildTime);
-                Change prevChange = null;
-                Change firstChange = null;
-                boolean buildItemAdded = false;
                 List<Long> weeklyBuilds = null;
 
                 if (mWeeklyBuilds != null) {
@@ -223,74 +219,59 @@ public class Main extends Activity {
                         weeklyBuilds.remove(0);
                     }
                 }
+                // add changes
                 int change_size = changes.size();
                 for (int i = 0; i < change_size; i++) {
                     Change currentChange = changes.get(i);
                     if (filter.isHidden(currentChange)) {
                         continue;
                     }
-                    if (firstChange == null) {
-                        firstChange = currentChange;
-                    }
-                    if (endTimeFilter && currentChange.date > buildTime) {
-                        continue;
-                    }
 
-                    if (prevChange != null && currentChange.date <= buildTime && prevChange.date > buildTime) {
-                        Map<String, Object> new_item = new HashMap<String, Object>();
-                        new_item.put("title", buildTimeString);
-                        new_item.put("type", Change.TYPE_BUILD);
-                        mChangesList.add(new_item);
-                        buildItemAdded = true;
-                    }
+                    HashMap<String, Object> changeEntry = currentChange.getHashMap(mActivity);
+                    Long changeTime = (Long) changeEntry.get("time");
+                    mChangesDict.put(changeTime, changeEntry);
 
-                    if (weeklyBuilds != null) {
-                        int j = 0;
-                        for (Long weekly : weeklyBuilds) {
-                            if (prevChange != null && currentChange.date <= weekly && prevChange.date > weekly) {
-                                Map<String, Object> new_item = new HashMap<String, Object>();
-                                new_item.put("title", getResources().getString(R.string.weekly_time_label) +
-                                        " " + Main.mDateDayFormat.format(weekly));
-                                new_item.put("type", Change.TYPE_WEEKLY);
-                                new_item.put("date", weekly);
-                                mChangesList.add(new_item);
-                                // no longer need to be checked
-                                weeklyBuilds.remove(j);
-                                break;
-                            }
-                            j++;
-                        }
+                    // add one header per new day
+                    long dayHeaderTime = getDayHeaderTime(changeTime);
+                    if (!mChangesDict.containsKey(dayHeaderTime)) {
+                        Map<String, Object> dayItem = new HashMap<String, Object>();
+                        dayItem.put("title", currentChange.dateDay);
+                        dayItem.put("type", Change.TYPE_HEADER);
+                        mChangesDict.put(dayHeaderTime, dayItem);
                     }
-
-                    if (!mLastDate.equals(currentChange.dateDay)) {
-                        Map<String, Object> new_item = new HashMap<String, Object>();
-                        new_item.put("title", currentChange.dateDay);
-                        new_item.put("type", Change.TYPE_HEADER);
-                        mChangesList.add(new_item);
-                        mLastDate = currentChange.dateDay;
-                    }
-
-                    mChangesList.add(currentChange.getHashMap(mActivity));
 
                     mChangesCount++;
-                    prevChange = currentChange;
+                }
+                // add this build time
+                Map<String, Object> builtEntry = new HashMap<String, Object>();
+                builtEntry.put("title", buildTimeString);
+                builtEntry.put("type", Change.TYPE_BUILD);
+                mChangesDict.put(buildTime, builtEntry);
 
-                    if (mChangesCount >= MAX_CHANGES) {
-                        break;
+                // add weekly builds
+                if (weeklyBuilds != null) {
+                    int j = 0;
+                    for (Long weeklyTime : weeklyBuilds) {
+                        if (weeklyTime < startTime) {
+                            continue;
+                        }
+                        Map<String, Object> weeklyEntry = new HashMap<String, Object>();
+                        weeklyEntry.put("title", getResources().getString(R.string.weekly_time_label) +
+                                " " + Main.mDateFormat.format(weeklyTime));
+                        weeklyEntry.put("type", Change.TYPE_WEEKLY);
+                        mChangesDict.put(weeklyTime, weeklyEntry);
                     }
                 }
-                if (!buildItemAdded) {
-                    if (prevChange != null && prevChange.date > buildTime) {
-                        Map<String, Object> new_item = new HashMap<String, Object>();
-                        new_item.put("title", buildTimeString);
-                        new_item.put("type", Change.TYPE_BUILD);
-                        mChangesList.add(new_item);
-                    } else if (firstChange != null && firstChange.date < buildTime) {
-                        Map<String, Object> new_item = new HashMap<String, Object>();
-                        new_item.put("title", buildTimeString);
-                        new_item.put("type", Change.TYPE_BUILD);
-                        mChangesList.add(0, new_item);
+
+                // now sort based on key
+                List<Long> changeTimeList = new ArrayList<>(mChangesDict.keySet());
+                Collections.sort(changeTimeList, Collections.reverseOrder());
+                for (Long changeTime : changeTimeList){
+                    if (endTimeFilter && changeTime > buildTime) {
+                        continue;
                     }
+                    Map<String, Object> currentChange = mChangesDict.get(changeTime);
+                    mChangesList.add(currentChange);
                 }
 
                 mActivity.runOnUiThread(new Runnable() {
@@ -721,6 +702,15 @@ public class Main extends Activity {
         c.set(Calendar.HOUR_OF_DAY, 0);
         c.set(Calendar.MINUTE, 0);
         c.set(Calendar.SECOND, 0);
+        return c.getTimeInMillis();
+    }
+
+    public static long getDayHeaderTime(Long time) {
+        Calendar c = Calendar.getInstance();
+        c.setTimeInMillis(time);
+        c.set(Calendar.HOUR_OF_DAY, 23);
+        c.set(Calendar.MINUTE, 59);
+        c.set(Calendar.SECOND, 59);
         return c.getTimeInMillis();
     }
 }

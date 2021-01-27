@@ -21,7 +21,7 @@ import java.util.List;
 import javax.net.ssl.HttpsURLConnection;
 
 public class OmniBuildData {
-    private static final String TAG = "OmniBuildData";
+    private static final String TAG = "OmniChange:OmniBuildData";
     private static final int HTTP_READ_TIMEOUT = 30000;
     private static final int HTTP_CONNECTION_TIMEOUT = 30000;
     private static final String URL_BASE_JSON = "https://dl.omnirom.org/json.php";
@@ -101,17 +101,17 @@ public class OmniBuildData {
         return false;
     }
 
-    private static long getUnifiedWeeklyBuildTime(long weeklyTime) {
-        Calendar c = Calendar.getInstance();
-        c.setTimeInMillis(weeklyTime);
-        c.set(Calendar.HOUR_OF_DAY, 0);
-        c.set(Calendar.MINUTE, 0);
-        c.set(Calendar.SECOND, 0);
-        return c.getTimeInMillis();
-    }
-
     public static List<Long> getWeeklyBuildTimes() {
         String url = isGappsDevice() ? URL_BASE_GAPPS_JSON : URL_BASE_JSON;
+        List<Long> l = getWeeklyBuildTimes(url);
+        if (l.size() == 0) {
+            // just try to catch unofficial devices
+            l = getWeeklyBuildTimes(URL_BASE_GAPPS_JSON);
+        }
+        return l;
+    }
+
+    private static List<Long> getWeeklyBuildTimes(String url) {
         List<Long> weeklyBuildTimes = new ArrayList<>();
         String buildData = downloadUrlMemoryAsString(url);
         if (buildData == null || buildData.length() == 0) {
@@ -129,7 +129,7 @@ public class OmniBuildData {
                         String fileName = build.getString("filename");
                         if(isMatchingImage(fileName)) {
                             long modTime = build.getLong("timestamp") * 1000;
-                            weeklyBuildTimes.add(getUnifiedWeeklyBuildTime(modTime));
+                            weeklyBuildTimes.add(modTime);
                         }
                     }
                 }

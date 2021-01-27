@@ -11,7 +11,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="4dp"
-        android:background="@drawable/card_bg_accent"
+        android:background="@drawable/card_bg_weekly"
         android:elevation="2dp"
         android:gravity="center_vertical"
         android:orientation="vertical"

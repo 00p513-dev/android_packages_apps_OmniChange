@@ -5,4 +5,6 @@
     <color name="material_grey_200">#eeeeee</color>
     <color name="material_grey_300">#ffe0e0e0</color>
     <color name="card_bg_color">@android:color/white</color>
+    <color name="card_bg_color_weekly">#ff9f00</color>
+    <color name="card_bg_color_build">#0080ff</color>
 </resources>
