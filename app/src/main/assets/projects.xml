@@ -373,7 +373,10 @@
                 <git name="android_kernel_xiaomi_msm8953" />
                 <git name="android_device_xiaomi_mido" />
                 <git name="vendor_qcom_opensource_dataservices" />
-                <git name="android_device_qcom_caf-sepolicy" />
+                <git name="android_device_qcom_sepolicy_vndr" />
+                <git name="android_external_ant-wireless_antradio-library" />
+                <git name="android_vendor_qcom_opensource_packages_apps_Bluetooth" />
+                <git name="android_vendor_qcom_opensource_bluetooth-commonsys-intf" />
                 <git name="android_external_json-c" />
             </repos>
         </device>
