@@ -35,7 +35,7 @@
             <code>ether</code>
             <repos>
                 <git name="android_device_nextbit_ether" />
-                <git name="android_kernel_nextbit_msm8992" />"
+                <git name="android_kernel_nextbit_msm8992" />
                 <git name="android_hardware_qcom_display-caf-msm8992" />
                 <git name="android_hardware_qcom_audio-caf-msm8992" />
                 <git name="android_hardware_qcom_media-caf-msm8992" />
@@ -97,7 +97,7 @@
             <code>athene</code>
             <repos>
                 <git name="android_device_motorola_athene" />
-                <git name="android_kernel_motorola_msm8952" />"
+                <git name="android_kernel_motorola_msm8952" />
                 <git name="android_hardware_qcom_display-caf-msm8952" />
                 <git name="android_hardware_qcom_audio-caf-msm8952" />
                 <git name="android_hardware_qcom_media-caf-msm8952" />
@@ -117,7 +117,7 @@
             <code>cedric</code>
             <repos>
                 <git name="android_device_motorola_cedric" />
-                <git name="android_kernel_motorola_msm8937" />"
+                <git name="android_kernel_motorola_msm8937" />
                 <git name="android_hardware_qcom_display-caf-msm8996" />
                 <git name="android_hardware_qcom_audio-caf-msm8996" />
                 <git name="android_hardware_qcom_media-caf-msm8996" />
@@ -135,11 +135,82 @@
             <code>potter</code>
             <repos>
                 <git name="android_device_motorola_potter" />
-                <git name="android_kernel_motorola_msm8953" />"
+                <git name="android_kernel_motorola_msm8953" />
                 <git name="android_hardware_qcom_display-caf-msm8996" />
                 <git name="android_hardware_qcom_audio-caf-msm8996" />
                 <git name="android_hardware_qcom_media-caf-msm8996" />
                 <git name="vendor_qcom_opensource_dataservices" />
+                <git name="android_device_qcom_caf-sepolicy" />
+            </repos>
+        </device>
+        <device>
+            <name>Moto g 5G Plus</name>
+            <code>nairo</code>
+            <repos>
+                <git name="android_device_motorola_dynamic_common" />
+                <git name="android_device_motorola_sm7250_common" />
+                <git name="android_device_motorola_nairo" />
+                <git name="android_vendor_qcom_opensource_packages_apps_Bluetooth" />
+                <git name="android_vendor_qcom_opensource_bluetooth-commonsys-intf" />
+                <git name="android_vendor_qcom_opensource_fm-commonsys" />
+                <git name="android_packages_apps_MotoActions" />
+                <git name="android_device_qcom_caf-sepolicy" />
+            </repos>
+        </device>
+        <device>
+            <name>Moto g8/g fast</name>
+            <code>motorola_sm6125_common</code>
+            <repos>
+                <git name="android_device_motorola_dynamic_common" />
+                <git name="android_device_motorola_sm6125_common" />
+                <git name="android_kernel_motorola_sm6125" />
+                <git name="android_vendor_qcom_opensource_packages_apps_Bluetooth" />
+                <git name="android_vendor_qcom_opensource_bluetooth-commonsys-intf" />
+                <git name="android_vendor_qcom_opensource_fm-commonsys" />
+                <git name="android_packages_apps_MotoActions" />
+                <git name="android_device_qcom_caf-sepolicy" />
+            </repos>
+        </device>
+        <device>
+            <name>Moto g pro/g stylus</name>
+            <code>motorola_sm6125_common</code>
+            <repos>
+                <git name="android_device_motorola_dynamic_common" />
+                <git name="android_device_motorola_sm6125_common" />
+                <git name="android_kernel_motorola_sm6125" />
+                <git name="android_vendor_qcom_opensource_packages_apps_Bluetooth" />
+                <git name="android_vendor_qcom_opensource_bluetooth-commonsys-intf" />
+                <git name="android_vendor_qcom_opensource_fm-commonsys" />
+                <git name="android_packages_apps_MotoActions" />
+                <git name="android_device_qcom_caf-sepolicy" />
+            </repos>
+        </device>
+        <device>
+            <name>Moto g8 power/g power</name>
+            <code>motorola_sm6125_common</code>
+            <repos>
+                <git name="android_device_motorola_dynamic_common" />
+                <git name="android_device_motorola_sm6125_common" />
+                <git name="android_kernel_motorola_sm6125" />
+                <git name="android_vendor_qcom_opensource_packages_apps_Bluetooth" />
+                <git name="android_vendor_qcom_opensource_bluetooth-commonsys-intf" />
+                <git name="android_vendor_qcom_opensource_fm-commonsys" />
+                <git name="android_packages_apps_MotoActions" />
+                <git name="android_device_qcom_caf-sepolicy" />
+            </repos>
+        </device>
+        <device>
+            <name>Moto One Fusion+</name>
+            <code>liber</code>
+            <repos>
+                <git name="android_device_motorola_dynamic_common" />
+                <git name="android_device_motorola_sm6150_common" />
+                <git name="android_device_motorola_liber" />
+                <git name="android_kernel_motorola_sm6150" />
+                <git name="android_vendor_qcom_opensource_packages_apps_Bluetooth" />
+                <git name="android_vendor_qcom_opensource_bluetooth-commonsys-intf" />
+                <git name="android_vendor_qcom_opensource_fm-commonsys" />
+                <git name="android_packages_apps_MotoActions" />
                 <git name="android_device_qcom_caf-sepolicy" />
             </repos>
         </device>
@@ -159,7 +230,7 @@
             <code>griffin</code>
             <repos>
                 <git name="android_device_motorola_griffin" />
-                <git name="android_kernel_motorola_msm8996" />"
+                <git name="android_kernel_motorola_msm8996" />
                 <git name="android_hardware_qcom_display-caf-msm8996" />
                 <git name="android_hardware_qcom_audio-caf-msm8996" />
                 <git name="android_hardware_qcom_media-caf-msm8996" />
@@ -175,7 +246,7 @@
             <code>nx609j</code>
             <repos>
                 <git name="android_device_nubia_nx609j" />
-                <git name="android_kernel_nubia_nx609j" />"
+                <git name="android_kernel_nubia_nx609j" />
                 <git name="android_packages_apps_SnapdragonCamera2" />
             </repos>
         </device>
@@ -186,7 +257,7 @@
             <code>gts210vewifi</code>
             <repos>
                 <git name="android_device_samsung_msm8976-common" />
-                <git name="android_device_samsung_gts210vewifi" />"
+                <git name="android_device_samsung_gts210vewifi" />
                 <git name="android_hardware_qcom_display-caf-msm8952" />
                 <git name="android_hardware_qcom_audio-caf-msm8952" />
                 <git name="android_hardware_qcom_media-caf-msm8952" />
