@@ -259,6 +259,7 @@ public class Main extends Activity {
                         weeklyEntry.put("title", getResources().getString(R.string.weekly_time_label) +
                                 " " + Main.mDateFormat.format(weeklyTime));
                         weeklyEntry.put("type", Change.TYPE_WEEKLY);
+                        weeklyEntry.put("time", weeklyTime);
                         mChangesDict.put(weeklyTime, weeklyEntry);
                     }
                 }

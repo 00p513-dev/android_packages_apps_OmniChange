@@ -143,8 +143,11 @@ class ChangeAdapter extends BaseAdapter {
                     view.setOnLongClickListener(new View.OnLongClickListener() {
                         @Override
                         public boolean onLongClick(View v) {
-                            mSharedPreferences.edit().putLong("start_time", (Long) mArrayList.get(position).get("date")).commit();
-                            ((Main) mActivity).load();
+                            Object o = mArrayList.get(position).get("time");
+                            if (o != null) {
+                                mSharedPreferences.edit().putLong("start_time", (Long) o).commit();
+                                ((Main) mActivity).load();
+                            }
                             return true;
                         }
                     });
