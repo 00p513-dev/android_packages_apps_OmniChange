@@ -229,6 +229,9 @@ public class Main extends Activity {
 
                     HashMap<String, Object> changeEntry = currentChange.getHashMap(mActivity);
                     Long changeTime = (Long) changeEntry.get("time");
+                    if (changeTime < startTime) {
+                        continue;
+                    }
                     mChangesDict.put(changeTime, changeEntry);
 
                     // add one header per new day
