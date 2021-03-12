@@ -10,7 +10,7 @@
     <string name="list_action_sum">リスト項目を選択した時のアクション</string>
     <string name="cancel">キャンセル</string>
     <string name="filter">フィルター</string>
-    <string name="filter_all">すべてのデバイスを表示</string>
+    <string name="filter_all">全ての端末を表示</string>
     <string name="add_device">端末</string>
     <string name="device_list">端末</string>
     <string name="this_device">この端末</string>
@@ -24,7 +24,7 @@
     <string name="using_cache">ネットワークエラーです。キャッシュされた変更のみを表示します。\n\nブラウザで手動でウェブサイトを開いて下さい。</string>
     <string name="change">変更</string>
     <string name="no_changes">変更はありません。\n\nビルドが既に最新のものか更新フィルターを変更する必要があります。</string>
-    <string name="no_message">（投稿メッセージなし）</string>
+    <string name="no_message">(投稿メッセージなし)</string>
     <string name="close">終了</string>
     <string name="open">開く</string>
     <string name="is_new">新規：</string>

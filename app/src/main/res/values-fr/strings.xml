@@ -29,6 +29,7 @@
     <string name="open">Ouvrir</string>
     <string name="is_new">NOUVEAU:</string>
     <string name="error">Erreur.</string>
+    <string name="open_gerrit">Afficher</string>
     <string name="open_website">Site internet</string>
     <string name="branches">Branches: </string>
     <string name="show_twrp">Montrer les changements du recovery</string>
@@ -40,6 +41,7 @@
     <string name="start_time_label">Depuis:</string>
     <string name="num_items_label">Changements:</string>
     <string name="build_time_label">Build:</string>
+    <string name="weekly_time_label">Hebdomadairement:</string>
     <string name="menu_date_label">Depuis</string>
     <string name="build_time">Montrer avant le moment de la construction</string>
 </resources>
