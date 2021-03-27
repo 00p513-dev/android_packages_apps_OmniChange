@@ -41,5 +41,4 @@
     <string name="num_items_label">Változások:</string>
     <string name="build_time_label">Építés:</string>
     <string name="menu_date_label">Ettől</string>
-    <string name="build_time">Építés ideje előtti változások</string>
 </resources>

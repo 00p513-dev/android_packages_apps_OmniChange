@@ -41,5 +41,4 @@
     <string name="num_items_label">Zmiany:</string>
     <string name="build_time_label">Wersja:</string>
     <string name="menu_date_label">Od czasu</string>
-    <string name="build_time">Pokaż przed czasem zrobienia</string>
 </resources>

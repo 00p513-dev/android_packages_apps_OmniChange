@@ -29,6 +29,7 @@
     <string name="open">Otvoriť</string>
     <string name="is_new">NOVÉ:</string>
     <string name="error">Chyba.</string>
+    <string name="open_gerrit">Zobraziť</string>
     <string name="open_website">Webová stránka</string>
     <string name="branches">Pobočky: </string>
     <string name="show_twrp">Zobraziť zmeny Recovery</string>
@@ -40,6 +41,6 @@
     <string name="start_time_label">Od:</string>
     <string name="num_items_label">Zmeny:</string>
     <string name="build_time_label">Zostavenie:</string>
+    <string name="weekly_time_label">Týždenne:</string>
     <string name="menu_date_label">Od</string>
-    <string name="build_time">Zobraziť pred časom zostavenia</string>
 </resources>

@@ -43,5 +43,4 @@
     <string name="build_time_label">Build:</string>
     <string name="weekly_time_label">Hebdomadairement:</string>
     <string name="menu_date_label">Depuis</string>
-    <string name="build_time">Montrer avant le moment de la construction</string>
 </resources>

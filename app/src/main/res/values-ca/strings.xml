@@ -41,5 +41,4 @@
     <string name="num_items_label">Canvis:</string>
     <string name="build_time_label">Compilació:</string>
     <string name="menu_date_label">Des de</string>
-    <string name="build_time">Mostra-ho abans del moment de compilació</string>
 </resources>

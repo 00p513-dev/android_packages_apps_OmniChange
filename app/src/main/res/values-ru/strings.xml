@@ -41,5 +41,4 @@
     <string name="num_items_label">Изменения:</string>
     <string name="build_time_label">Сборка:</string>
     <string name="menu_date_label">Начиная с</string>
-    <string name="build_time">Показывать перед временем сборки</string>
 </resources>

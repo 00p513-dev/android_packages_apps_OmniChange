@@ -43,5 +43,4 @@
     <string name="build_time_label">ビルド：</string>
     <string name="weekly_time_label">毎週:</string>
     <string name="menu_date_label">元：</string>
-    <string name="build_time">前回のビルド日時を表示</string>
 </resources>

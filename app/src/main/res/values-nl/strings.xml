@@ -41,5 +41,4 @@
     <string name="num_items_label">Wijzigingen:</string>
     <string name="build_time_label">Versie:</string>
     <string name="menu_date_label">Sinds</string>
-    <string name="build_time">Toon voor versie tijd</string>
 </resources>

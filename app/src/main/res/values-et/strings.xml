@@ -43,5 +43,4 @@
     <string name="build_time_label">Järk:</string>
     <string name="weekly_time_label">Iganädalane:</string>
     <string name="menu_date_label">Alates</string>
-    <string name="build_time">Kuva enne valmistusaega</string>
 </resources>

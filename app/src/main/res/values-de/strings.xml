@@ -43,5 +43,4 @@
     <string name="build_time_label">Version:</string>
     <string name="weekly_time_label">Weekly:</string>
     <string name="menu_date_label">Seit</string>
-    <string name="build_time">Vor Buildzeitpunkt anzeigen</string>
 </resources>

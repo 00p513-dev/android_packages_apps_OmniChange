@@ -43,5 +43,4 @@
     <string name="build_time_label">Compilação:</string>
     <string name="weekly_time_label">Semanal:</string>
     <string name="menu_date_label">Desde</string>
-    <string name="build_time">Mostrar antes da compilação</string>
 </resources>

@@ -41,5 +41,4 @@
     <string name="num_items_label">变更:</string>
     <string name="build_time_label">版本号:</string>
     <string name="menu_date_label">自</string>
-    <string name="build_time">在生成时间前显示</string>
 </resources>

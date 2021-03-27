@@ -29,6 +29,7 @@
     <string name="open">Apri</string>
     <string name="is_new">NUOVO:</string>
     <string name="error">Errore.</string>
+    <string name="open_gerrit">Visualizza</string>
     <string name="open_website">Sito web</string>
     <string name="branches">Rami: </string>
     <string name="show_twrp">Mostra modifiche recovery</string>
@@ -40,6 +41,7 @@
     <string name="start_time_label">Da:</string>
     <string name="num_items_label">Modifiche:</string>
     <string name="build_time_label">Build:</string>
+    <string name="weekly_time_label">Settimanale:</string>
     <string name="menu_date_label">Dal</string>
-    <string name="build_time">Mostra prima della data di build</string>
+    <string name="build_time">Mostra solo prima della data della build</string>
 </resources>
